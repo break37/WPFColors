@@ -1,0 +1,15 @@
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\bin\Debug\WPFColors.exe.config
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\bin\Debug\WPFColors.exe
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\bin\Debug\WPFColors.pdb
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.csprojAssemblyReference.cache
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\MainWindow.g.cs
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\App.g.cs
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors_MarkupCompile.cache
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors_MarkupCompile.lref
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\MainWindow.baml
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.g.resources
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.Properties.Resources.resources
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.csproj.GenerateResource.cache
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.csproj.CoreCompileInputs.cache
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.exe
+D:\Programowanko\C#\Code with Matulewski\WPFColors\WPFColors\obj\Debug\WPFColors.pdb

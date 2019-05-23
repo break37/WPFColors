@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFColors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="500">
     <Grid>
-        
+        <StackPanel Margin="10">
+            <Rectangle x:Name="rectangle"
+                       Stroke="Black"
+                       Height="280" />
+
+            <Slider x:Name="sliderR"
+                    Minimum="0" Maximum="255"
+                    Margin="0 10"
+                    ValueChanged="ChangeColor" />
+
+            <Slider x:Name="sliderG"
+                    Minimum="0" Maximum="255"
+                    Margin="0 10"
+                    ValueChanged="ChangeColor" />
+
+            <Slider x:Name="sliderB"
+                    Minimum="0" Maximum="255" 
+                    Margin="0 10"
+                    ValueChanged="ChangeColor" />
+        </StackPanel>
     </Grid>
 </Window>

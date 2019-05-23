@@ -23,6 +23,14 @@ namespace WPFColors
         public MainWindow()
         {
             InitializeComponent();
+            rectangle.Fill = new SolidColorBrush(Colors.Black);
+        }
+
+        private void ChangeColor(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Color rectColor = Color.FromRgb((byte)sliderR.Value, (byte)sliderG.Value, (byte)sliderB.Value);
+
+            (rectangle.Fill as SolidColorBrush).Color = rectColor;
         }
     }
 }
