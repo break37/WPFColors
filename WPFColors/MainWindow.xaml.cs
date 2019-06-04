@@ -20,17 +20,63 @@ namespace WPFColors
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Properties
+
+        public Color RectangleColor
+        {
+            get { return (rectangle.Fill as SolidColorBrush).Color; }
+            set { (rectangle.Fill as SolidColorBrush).Color = value; }
+        }
+
+        #endregion
+
+        bool sliderValueFlag = false;
+
         public MainWindow()
         {
             InitializeComponent();
-            rectangle.Fill = new SolidColorBrush(Colors.Black);
+            
+            //set color and sliders positions
+            Color color = Settings.InitializeColor();
+            rectangle.Fill = new SolidColorBrush(color);
+            sliderR.Value = color.R;
+            sliderG.Value = color.G;
+            sliderB.Value = color.B;
+
+            sliderValueFlag = true;
+
+            //set window size and position
+            WindowParameters windowParameters = Settings.InitializeWindowParameters();
+            this.Width = windowParameters.WindowWidth;
+            this.Height= windowParameters.WindowHeight;
+            this.Left = windowParameters.WindowPositionX;
+            this.Top = windowParameters.WindowPositionY;
         }
 
-        private void ChangeColor(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void UpdateColor(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Color rectColor = Color.FromRgb((byte)sliderR.Value, (byte)sliderG.Value, (byte)sliderB.Value);
+            if (sliderValueFlag)
+            {
+                Color rectColor = Color.FromRgb((byte)sliderR.Value, (byte)sliderG.Value, (byte)sliderB.Value);
+                RectangleColor = rectColor;
+                Console.WriteLine("Color changed");
+            }
+        }
 
-            (rectangle.Fill as SolidColorBrush).Color = rectColor;
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Settings.SaveColor(RectangleColor);
+                Settings.SaveWindowParameters(this.Width, this.Height, this.Left, this.Top);
+                Close();
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Settings.SaveColor(RectangleColor);
+            Settings.SaveWindowParameters(this.Width, this.Height, this.Left, this.Top);
         }
     }
 }

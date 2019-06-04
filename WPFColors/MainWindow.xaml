@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFColors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="500">
+        Title="Colors" Height="450" Width="500"
+        KeyDown="Window_KeyDown" Closing="Window_Closing">
     <Grid>
         <StackPanel Margin="10">
             <Rectangle x:Name="rectangle"
@@ -15,17 +16,17 @@
             <Slider x:Name="sliderR"
                     Minimum="0" Maximum="255"
                     Margin="0 10"
-                    ValueChanged="ChangeColor" />
+                    ValueChanged="UpdateColor" />
 
             <Slider x:Name="sliderG"
                     Minimum="0" Maximum="255"
                     Margin="0 10"
-                    ValueChanged="ChangeColor" />
+                    ValueChanged="UpdateColor" />
 
             <Slider x:Name="sliderB"
                     Minimum="0" Maximum="255" 
                     Margin="0 10"
-                    ValueChanged="ChangeColor" />
+                    ValueChanged="UpdateColor" />
         </StackPanel>
     </Grid>
 </Window>
